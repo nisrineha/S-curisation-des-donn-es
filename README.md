@@ -1,5 +1,5 @@
 # S-curisation-des-donn-es
-Stockage de mot de passe: Rapport de travail : Rapport_Nisrine Hammout
+Stockage de mot de passe: Rapport de travail : Rapport_Nisrine Hammout.pdf, Ennonce: Tp-Sigma-2020.pdf
 # Partie 1: Interface textuelle 
 ## Le fichier welcome.py contient: 
 * Une fonction Bienvenue qui direct l'utilisateur pour: 
