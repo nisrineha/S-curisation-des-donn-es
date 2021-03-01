@@ -9,12 +9,10 @@ import string
 import hashlib
 import random
 
-#info log admin= tp mdp n
-
+# dbs
 rserver = redis.StrictRedis(host="localhost", port=6379, db=0,  decode_responses=True)
 rsalt = redis.StrictRedis(host="localhost", port=6379, db=1, decode_responses=True)
 rsalt_global = redis.StrictRedis(host="localhost", port=6379, db=2, decode_responses=True)
-#rsalt.flushdb()
 
 ### SHA-256
 
