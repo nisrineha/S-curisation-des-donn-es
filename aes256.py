@@ -19,8 +19,9 @@ def fun_aes(mdp):
     return mdp_aes , nonce
 
 #fonction decryptage
+key= rsalt_global.get('key')
 def decrypAES(mdp, mdp_hash, nonce):
-    
+
     mdp_decode= base64.b64decode(mdp_hash)
     nonce= base64.b64decode(nonce)
     

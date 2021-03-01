@@ -26,7 +26,7 @@ f = open("10000_8.txt", "a")
 #rnd_lists= random.choices(string.ascii_lowercase, k = 1000)
 #8 cara
 rnd_lists=[]
-for i in range(10000):  
+for i in range(10):  
     listss=''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
     rnd_lists.append(listss)
     
@@ -51,7 +51,7 @@ for user in rserver.keys():
     
     if not aes256.decrypAES(mdp, mdp_hash, nonce): 
         sys.exit()
-        
+      
 t2= time.perf_counter()
 
 f.write("aes:  %s\n" % (str(t2-t1)))
