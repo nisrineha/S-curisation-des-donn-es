@@ -5,7 +5,7 @@ Stockage de mot de passe
 * La méthode sha256 
 * La méthode de Sha256 + Sel global
 * La méthode de Sha256+ Sel global + Sel specifique
-* 
+
 
 ## Le fichier bcryct2.py contient: 
 * La méthode bcrypt 
