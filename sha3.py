@@ -34,68 +34,13 @@ def fun_sha256_selglobal(mdp):
 
 salt_global= rsalt_global.get('SelGlobal')
 
-def fun_sha265_sels(mdp):
+def salt(): 
     salt = ''.join(random.choice(string.ascii_lowercase) for i in range(32)) 
+    return salt
+
+def fun_sha265_sels( mdp, salt):
+    
     mdp_hash= hashlib.sha256(salt_global.encode() + mdp.encode()+ salt.encode()).hexdigest() 
-    return mdp_hash, salt
+    return mdp_hash
 
 
-
-
-'''  
- 
-for i in range(len(rserver.keys())):
-   print(rserver.keys()[i], rserver.get(rserver.keys()[i]))   
- 
-   
-for i in range(len(rserver.keys())):
-    mdp_hash = rserver.get(rserver.keys()[i])
-    rserver.set(rserver.keys()[i], fun_sha256(mdp_hash) )
-    
-for i in range(len(rserver.keys())):
-   print(rserver.keys()[i], rserver.get(rserver.keys()[i]))  
-
-for i in range(len(rserver.keys())):
-    
-    mdp_hash = rserver.get(rserver.keys()[i])
-    rserver.set(rserver.keys()[i], fun_sha256_selglobal(mdp_hash))
-
-
-def encrypt_SHA(hash_string):
-    sha_signature = hashlib.sha256(hash_string.encode()).hexdigest()
-    return sha_signature
-
-
-for i in range(len(rserver.keys())):
-    
-    mdp_hash = rserver.get(rserver.keys()[i])
-    rserver.keys()[i]
-    fun_sha265_sels(rserver.keys()[i], mdp_hash)
-
-for i in range(len(rserver.keys())):
-   print(rserver.keys()[i], rserver.get(rserver.keys()[i]))   
-
-for i in range(len(rsalt.keys())):
-   print(rsalt.keys()[i], rsalt.get(rsalt.keys()[i]))
-
-   
-for i in range(len(rsalt.keys())):
-   print(rsalt.keys()[i], rsalt.get(rsalt.keys()[i]))
-
-for i in range(len(rserver.keys())):
-   print(rserver.keys()[i], rserver.get(rserver.keys()[i]))
-   
-
-'''  
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
